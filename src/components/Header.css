@@ -1,0 +1,17 @@
+.Header {
+  text-align: left;
+  padding: .1em;
+  margin-left: 10%;
+    font-family: 'gotham-book';
+    font-size: 10em;
+    line-height: 1em;
+    font-weight: 600;
+  color: #fff;
+
+
+
+}
+
+h1 span {
+  color:  #BA1F31;
+}
