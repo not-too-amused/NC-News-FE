@@ -1,5 +1,5 @@
 import React from "react";
-import nav from "../App.css"
+import nav from "./Nav.css"
 import { Link } from "@reach/router";
 
 const Nav = () => {

@@ -8,7 +8,6 @@ class Topics extends Component {
   }
   render() {
     const { topics } = this.state;
-    console.log(topics, '<<<< DATA')
     return (
       <ul className="topicsstyle" >
         {topics.map(topic => {
