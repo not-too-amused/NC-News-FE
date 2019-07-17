@@ -15,9 +15,8 @@ class ArticleCard extends Component {
       <div className="articleCard" >
         <h1>{title}</h1>
         <h2>{author}</h2>
+        <h2>{votes}</h2>
         <h3>{body}</h3>
-
-
       </div>
     );
   }
