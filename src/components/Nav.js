@@ -11,6 +11,9 @@ const Nav = () => {
       <Link to="/">
         <button>Create a New Article</button>
       </Link>
+      <Link to="/articles">
+        <button>Show me Everything!</button>
+      </Link>
       <div><input type="text" placeholder="Search.." /></div>
     </nav>
   );

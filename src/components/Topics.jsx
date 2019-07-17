@@ -8,6 +8,7 @@ class Topics extends Component {
   }
   render() {
     const { topics } = this.state;
+    console.log(topics, '<<<TOPICS')
     return (
       <ul className="topicsstyle" >
         {topics.map(topic => {
@@ -15,7 +16,6 @@ class Topics extends Component {
             <li key={topic.slug} className="topicstyle">
               <h2>{topic.slug}</h2>
               <Link to={`${topic.slug}`}>View Topic</Link>
-
             </li>
           );
         })

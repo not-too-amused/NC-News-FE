@@ -1,11 +1,12 @@
-// import React, { Component } from 'react';
 import React, { Component } from 'react';
 import './App.css';
 import Header from "./components/Header.js";
 import Nav from "./components/Nav.js";
-import Main from "./components/Main.js";
+import Home from "./components/Home.js";
 import Topics from "./components/Topics"
 import Articles from "./components/Articles"
+import ArticleCard from "./components/ArticleCard"
+import Comments from "./components/Comments"
 import Footer from "./components/Footer.js";
 import { Router } from "@reach/router";
 import axios from 'axios';
@@ -21,11 +22,15 @@ class App extends Component {
         <Header className="Header" />
         <Nav className="Nav" />
         <Router>
-          <Main path="/" />
+          <Home path="/" />
           <Topics path="/topics" />
           <Articles path="/articles" articles={this.state.articles} />
+          <ArticleCard path="/articles/:article_id" />
         </Router>
-        <Footer className="Footer" />
+        <Router>
+          <Footer path="/" className="Footer" />
+          <Comments path="/articles/:article_id/" />
+        </Router>
       </div>
     );
   }

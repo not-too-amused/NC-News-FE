@@ -7,8 +7,9 @@
     font-size: 9em;
     line-height: 1em;
     font-weight: 700;
-    background-color: #93A3B1;
-text-shadow: .005em .005em #171A21;
+    background-color: rgba(28, 35, 34, 0.95);
+    color: #6C9B96;
+text-shadow: .005em .005em #141919;
 }
 
 h1 span {
