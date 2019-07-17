@@ -15,7 +15,7 @@ class Topics extends Component {
           return (
             <li key={topic.slug} className="topicstyle">
               <h2>{topic.slug}</h2>
-              <Link to={`${topic.slug}`}>View Topic</Link>
+              <Link to={`../articles?topic=${topic.slug}`}>View Topic</Link>
             </li>
           );
         })
