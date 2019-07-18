@@ -6,6 +6,7 @@ import QueryNav from "./components/Nav.js";
 import Topics from "./components/Topics"
 import Articles from "./components/Articles"
 import ArticleCard from "./components/ArticleCard"
+import Comments from "./components/Comments"
 import Footer from "./components/Footer.js";
 import { Router } from "@reach/router";
 import axios from 'axios';
@@ -20,17 +21,17 @@ class App extends Component {
     return (
       <div className="App">
         <Header className="Header" />
-        <Router className="Nav" >
-          <HomeNav path="/" />
-          <QueryNav path="/*" />
-        </Router>
+        <HomeNav className="Nav" path="/" />
         <Router className="Main">
           <Topics path="/" />
-          <Articles path="/articles" articles={this.state.articles} />
+          <Articles path="/articles/all/" articles={this.state.articles} />
           <Articles path="/articles/:topic" articles={this.state.artciles} />
-          <ArticleCard path="/articles/:article_id" />
+          <ArticleCard path="/articles/:topic/:article_id" />
         </Router>
-        <Footer path="/" className="Footer" />
+        <Router className="Bottom">
+          <Comments className="Comments" path="/articles/:topic/:article_id" />
+          <Footer path="/" className="Footer" />
+        </Router>
       </div>
     );
   }

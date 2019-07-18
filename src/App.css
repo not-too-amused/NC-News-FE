@@ -1,19 +1,29 @@
 .App {
 
   display: grid;
-  grid-template-rows: 2fr 1fr 10fr 1fr;
-  grid-template-columns: minmax(320ppx, 1fr);
+  grid-template-rows: 220px 100px auto auto;
+  grid-template-columns: minmax(300ppx, 1fr);
   grid-template-areas:
   "Header"
   "Nav"
   "Main"
-  "Footer";
+  "Bottom";
   text-align: left;
-    font-family: 'Roboto Condensed', sans-serif;
-color: #1C2322;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #1C2322;
   background-color: #EDEDED;
+  max-width: 100%;
+  min-width: 300px;
 }
 .image {
   max-width: 100px;
   max-height: 100px;
+}
+
+.comments {
+  text-align: left;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #1C2322;
+  background-color: #EDEDED;
+  
 }

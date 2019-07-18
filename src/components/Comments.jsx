@@ -3,28 +3,55 @@ import axios from 'axios';
 import '../App.css'
 
 class Comments extends Component {
-  state = []
+  state = {
+    comments: []
+  }
 
   render() {
-    const comments = this.state
-    // console.log('>>>>', comments, '<<<<')
+    const { comments } = this.state
+    console.log('>>>>', comments, '<<<<')
     return (
-      <ul className="comments">
-        {/* {
-          comments.map(comment => {
-            return (
-              <li key={comment.comment_id} className="comment">
-                <h3>{comment.author}</h3>
-                <h3>{comment.created_at}</h3>
-                <h3>{comment.votes}</h3>
-                <h4>{comment.body}</h4>
-              </li>
-            )
-          })
-        }} */}
-      </ul>
+      <div>
+        <div className="panel-group">
+          <div className="panel panel-default">
+            <div className="panel-heading">
+              <h3 className="panel-title">
+                <a data-toggle="collapse" href="#comments">Click here to see the comments</a>
+              </h3>
+            </div>
+            <div id="comments" className="panel-collapse collapse">
+              <ul className="comments">
+                {
+                  comments.map(comment => {
+                    return (
+                      <li key={comment.comment_id} className="comment">
+                        <h5><span>{comment.author}</span>, {comment.created_at}</h5>
+                        <h4>{comment.body}</h4>
+                        <p>{comment.votes} people like this comment</p>
+                      </li>
+                    )
+                  })
+                }}
+              </ul>
+              <form action="">
+                <input type="text" name="newComment" value="Have your say.." />
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
     );
   }
+
+  postComment = (newComment) => {
+    this.setState({ newComment })
+  }
+
+
+
 
   componentDidMount = async () => {
     const comments = await this.fetchCommentById();
@@ -33,11 +60,15 @@ class Comments extends Component {
 
   fetchCommentById = async () => {
     const { article_id } = this.props
-    const data = await axios.get(
+    const { data } = await axios.get(
       `https://rebbit-db.herokuapp.com/api/articles/${article_id}/comments`
     )
-    return data.data;
+    console.log(data)
+    return data;
   }
+
+
+
 }
 
 export default Comments;

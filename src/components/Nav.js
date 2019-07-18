@@ -5,25 +5,16 @@ import { Link } from "@reach/router";
 const HomeNav = () => {
   return (
     <nav className="HomeNav">
-      <Link to="/articles/">
+      <Link to="/articles/all/12">
         <button>Serve me up something</button>
       </Link>
-      <Link to="/articles">
+      <Link to="/articles/all">
         <button>Show me Everything!</button>
       </Link>
       <Link to="/">
         <button>Create a New Article</button>
       </Link>
-      <select>
-        <option value="created_at">Date</option>
-        <option value="author">Author</option>
-        <option value="comment_count">Comments</option>
-      </select>
-      <select>
-        <option value="desc">Descending</option>
-        <option value="asc">Ascending</option>
-      </select>
-      <div><input type="text" placeholder="Search.." /></div>
+      {/* <div><input type="text" placeholder="Search.." /></div> */}
     </nav>
   );
 };

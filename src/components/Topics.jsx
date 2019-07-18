@@ -27,7 +27,7 @@ class Topics extends Component {
         </li>
         <li key='cooking'>
           <h2>cooking</h2>
-          <Link to={'../articles/cooking'}><img src='https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt='spoons and spices'></img></Link>
+          <Link to={'../articles/cooking'}><img src='https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt=' ceramic spoons with spices'></img></Link>
         </li>
         <li key='football'>
           <h2>football</h2>
