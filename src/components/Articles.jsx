@@ -1,4 +1,4 @@
-import React, { Component, Navigate } from 'react';
+import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
 import './Articles.css';
@@ -48,6 +48,7 @@ class Articles extends Component {
 
   componentDidMount = async () => {
     const articles = await this.fetchArticles();
+    console.log({ articles })
     this.setState({ articles })
   }
   //topic, sort, order
@@ -61,22 +62,20 @@ class Articles extends Component {
     )
     return data.articles
   }
-  handleChange(event) {
-    console.log(event)
+  handleChange(sort) {
+    this.setState = { articles: [], sort_by: 'created_at', order: 'desc' }
+    console.log(this.state)
   }
-  handleOrder(event) {
-    console.log(event)
+  handleOrder(order) {
+    this.setState = { order: order }
+    console.log(this.state)
   }
-
-
-  // updateSort = (sort_by) => {
-  //   this.setState({ sort_by })
-  // }
 
   componentDidUpdate = async (prevProps, prevState) => {
-    if (this.state.sort_by !== prevState.sort_by) {     //*check if state is different to previous state
-      const articles = await this.fetchArticles() //*call function and assign to variable
-      this.setState({ articles })                 //*setState to the result assigned to the var
+    if (this.state.sort_by !== prevState.sort_by || this.state.order !== prevState.order) {
+      console.log('yes component DID update!')
+      const articles = await this.fetchArticles()
+      this.setState({ articles })
     }
   }
 }

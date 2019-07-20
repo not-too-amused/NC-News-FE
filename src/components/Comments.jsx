@@ -27,6 +27,7 @@ class Comments extends Component {
                           <p className="created_at"><span className="author">{comment.author}</span>{comment.created_at}</p>
                           <p className="comment_body">{comment.body}</p>
                           <p className="votes">{comment.votes} people like this comment overall</p>
+                          <div className="thumbs" ><i className="fa fa-thumbs-up"></i> <i className="fa fa-thumbs-down"></i></div>
                         </li>
                       )
                     })
