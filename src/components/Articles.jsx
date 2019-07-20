@@ -9,12 +9,16 @@ import Moment from 'react-moment';
 class Articles extends Component {
   state = { articles: [], props: {} }
 
+  handleChange(event) {
+    console.log('handling it!!')
+  }
+
   render() {
     const { articles } = this.state;
     return (
       <div>
-        <select id="sort">
-          {/* onChange=""> */}
+        <select onChange={this.handleChange} id="sort">
+
           <option value="created_at">Date</option>
           <option value="author">Author</option>
           <option value="comment_count">Comments</option>
@@ -32,7 +36,7 @@ class Articles extends Component {
                   <Card.Body>
                     <Card.Title className="article_title">{article.title}</Card.Title>
                     <Card.Text className="article_info">
-                      <p>Created by {article.author} on <Moment format="LL">{article.created_at}</Moment></p>
+                      Created by {article.author} on <Moment format="LL">{article.created_at}</Moment>
                     </Card.Text>
                     <Button className="article_link" variant="link" href={`${article.article_id}`} >See the full article here</Button>
                   </Card.Body>
@@ -49,15 +53,12 @@ class Articles extends Component {
   componentDidMount = async () => {
     const articles = await this.fetchArticles();
     this.setState({ articles })
-    // console.log(articles)
   }
   //topic, sort, order
   fetchArticles = async () => {
-    console.log(this.props, 'props')
     const { topic } = this.props
     const { sort_by } = document.getElementById("sort").value;
-    const { order } = document.getElementById("order").value;
-    console.log(sort_by, '<<sortby', order, '<<<order')
+    // const { order } = document.getElementById("order").value;
     const { data } = await axios.get(
       'https://rebbit-db.herokuapp.com/api/articles', { params: { topic, sort_by } }
 
