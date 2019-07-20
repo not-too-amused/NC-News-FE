@@ -14,10 +14,10 @@ class Comments extends Component {
       <div>
         <Accordion defaultActiveKey="0">
           <Card>
-            <Accordion.Toggle as={Card.Header} eventKey="0">
+            <Accordion.Toggle as={Card.Header} eventKey="1">
               Click to see the comments
             </Accordion.Toggle>
-            <Accordion.Collapse eventKey="0">
+            <Accordion.Collapse eventKey="1">
               <Card.Body>
                 <ul className="comments">
                   {

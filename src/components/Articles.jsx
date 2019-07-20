@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Navigate } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
 import './Articles.css';
@@ -7,23 +7,19 @@ import Moment from 'react-moment';
 
 
 class Articles extends Component {
-  state = { articles: [], props: {} }
-
-  handleChange(event) {
-    console.log('handling it!!')
-  }
+  state = { articles: [], sort_by: 'created_at', order: 'desc' }
 
   render() {
     const { articles } = this.state;
     return (
       <div>
-        <select onChange={this.handleChange} id="sort">
+        <select onChange={(event) => this.handleChange(event.target.value)} id="sort">
 
           <option value="created_at">Date</option>
           <option value="author">Author</option>
           <option value="comment_count">Comments</option>
         </select>
-        <select id="order">
+        <select onChange={(event) => this.handleOrder(event.target.value)} id="order">
           <option value="desc">Descending</option>
           <option value="asc">Ascending</option>
         </select>
@@ -57,17 +53,25 @@ class Articles extends Component {
   //topic, sort, order
   fetchArticles = async () => {
     const { topic } = this.props
-    const { sort_by } = document.getElementById("sort").value;
-    // const { order } = document.getElementById("order").value;
+    const { sort_by } = this.state
+    const { order } = this.state
     const { data } = await axios.get(
-      'https://rebbit-db.herokuapp.com/api/articles', { params: { topic, sort_by } }
+      'https://rebbit-db.herokuapp.com/api/articles', { params: { topic, sort_by, order } }
 
     )
     return data.articles
   }
-  updateSort = (sort_by) => {
-    this.setState({ sort_by })
+  handleChange(event) {
+    console.log(event)
   }
+  handleOrder(event) {
+    console.log(event)
+  }
+
+
+  // updateSort = (sort_by) => {
+  //   this.setState({ sort_by })
+  // }
 
   componentDidUpdate = async (prevProps, prevState) => {
     if (this.state.sort_by !== prevState.sort_by) {     //*check if state is different to previous state
