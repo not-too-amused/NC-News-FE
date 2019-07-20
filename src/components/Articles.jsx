@@ -28,11 +28,11 @@ class Articles extends Component {
           {articles.map(article => {
             return (
               <li key={article.article_id} className="article">
-                <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="right" src="holder.js/100px180" />
+                <Card className="articles_card">
+                  {/* <Card.Img variant="right" src="placeholder" /> */}
                   <Card.Body>
                     <Card.Title className="article_title">{article.title}</Card.Title>
-                    <Card.Text>
+                    <Card.Text className="article_info">
                       <p>{article.author}, <Moment format="LL">{article.created_at}</Moment></p>
                     </Card.Text>
                     <Nav.Item>

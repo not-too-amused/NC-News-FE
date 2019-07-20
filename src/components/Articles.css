@@ -4,17 +4,36 @@ overflow-y: scroll;
 max-height: 560px;
 }
 
+.article {
+  margin: 1em;
+}
+
+.articles_card {
+  background-color:#EDEDED;
+  border-width: 1.75px;
+  border-color: #6C9B96;
+}
+
 .article_title {
   font-weight: 700;
   font-size: 140%;
   margin:.2em;
 }
 
+.article_info {
+  text-align: left;
+  margin: 1em;
+  margin-left: 1.6em;
+  /* padding-right: 1em; */
+}
+
 .article_link {
 background-color: rgba(108, 155, 150, 0.9);
 box-shadow:  0 0 2px 1px #EDEDED inset;
+width: 23%;
 font-weight: 400;
 font-size: 110%;
-margin-top: 0;
-margin-bottom: 3em;
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 1.5em;
 }
