@@ -35,9 +35,7 @@ class Articles extends Component {
                     <Card.Text className="article_info">
                       <p>{article.author}, <Moment format="LL">{article.created_at}</Moment></p>
                     </Card.Text>
-                    <Nav.Item>
-                      <Nav.Link className="article_link" href={`${article.article_id}`}>See the full article here</Nav.Link>
-                    </Nav.Item>
+                    <Button className="article_link" variant="link" href={`${article.article_id}`} >See the full article here</Button>
                   </Card.Body>
                 </Card>
               </li>

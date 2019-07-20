@@ -23,17 +23,13 @@ max-height: 560px;
 .article_info {
   text-align: left;
   margin: 1em;
-  margin-left: 1.6em;
+  margin-left: 1.5em;
   /* padding-right: 1em; */
 }
 
 .article_link {
-background-color: rgba(108, 155, 150, 0.9);
-box-shadow:  0 0 2px 1px #EDEDED inset;
-width: 23%;
+color: #6C9B96;
 font-weight: 400;
 font-size: 110%;
-margin-top: 1em;
-margin-bottom: 1em;
-margin-left: 1.5em;
+margin-left: .8em;
 }
