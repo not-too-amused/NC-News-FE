@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from 'react-bootstrap/Nav'
 import "../App.css"
-import { Link } from "@reach/router";
 
 const NavBar = () => {
   return (
