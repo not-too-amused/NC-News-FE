@@ -8,7 +8,6 @@ import ArticleCard from "./components/ArticleCard"
 import Comments from "./components/Comments"
 import Footer from "./components/Footer.jsx";
 import { Router } from "@reach/router";
-import axios from 'axios';
 
 const App = () => {
   return (

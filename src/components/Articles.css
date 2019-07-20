@@ -1,7 +1,7 @@
 .articles {
   grid-area: main;
-overflow-y: scroll;
-max-height: 560px;
+  overflow-y: scroll;
+  max-height: 560px;
 }
 
 .article {

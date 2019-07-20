@@ -9,8 +9,6 @@ class ArticleCard extends Component {
 
   render() {
     const { article: { title, body, votes, author } } = this.state
-
-
     return (
       <div className="articleCard" >
         <h1>{title}</h1>
@@ -20,8 +18,6 @@ class ArticleCard extends Component {
       </div>
     );
   }
-
-
 
   componentDidMount = async () => {
     const article = await this.fetchArticleById();
@@ -35,7 +31,6 @@ class ArticleCard extends Component {
     )
     return data.articles;
   }
-
 }
 
 export default ArticleCard;

@@ -16,9 +16,6 @@ const NavBar = () => {
       </Nav.Item>
     </nav>
   );
-
-
-
 };
 
 export default NavBar;

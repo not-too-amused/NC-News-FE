@@ -23,7 +23,6 @@ nav {
   color: #6C9B96;
   font-weight: 400;
   font-size: 110%;
-
 }
 
 .comments {
@@ -34,11 +33,4 @@ nav {
   background-color: #EDEDED;
   overflow-y: scroll;
   max-height: 560px;
-  
 }
-
-/* @media only screen and (max-width: 600px) {
-  body {
-    grid-template-columns: 320px;
-  }
-} */
