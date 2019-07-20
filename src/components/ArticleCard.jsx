@@ -14,9 +14,9 @@ class ArticleCard extends Component {
     return (
       <div className="articleCard" >
         <h1>{title}</h1>
-        <h2>{author}</h2>
-        <h2>{votes}</h2>
-        <h3>{body}</h3>
+        <p className="articleinfo">{author}</p>
+        <p className="articleinfo">{votes}</p>
+        <p className="articleinfo">{body}</p>
       </div>
     );
   }
