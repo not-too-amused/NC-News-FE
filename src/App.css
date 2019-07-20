@@ -18,6 +18,7 @@
 }
 
 .comments {
+  width: 100%;
   text-align: left;
   font-family: 'Roboto Condensed', sans-serif;
   color: #1C2322;

@@ -1,19 +1,20 @@
 import React from "react";
+import Nav from 'react-bootstrap/Nav'
 import nav from "./Nav.css"
 import { Link } from "@reach/router";
 
-const Nav = () => {
+const NavBar = () => {
   return (
-    <nav className="HomeNav">
-      <Link to={"/articles/all/12"}>
-        <button>Serve me up something</button>
-      </Link>
-      <Link to="/articles/all">
-        <button>Show me Everything!</button>
-      </Link>
-      <Link to="/">
-        <button>Create a New Article</button>
-      </Link>
+    <nav className="NavBar">
+      <Nav.Item>
+        <Nav.Link href="/articles/all/12">Serve Me Up Something</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="/articles/all">Show Me Everything</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="/">Create A New Article</Nav.Link>
+      </Nav.Item>
     </nav>
   );
 
@@ -21,4 +22,4 @@ const Nav = () => {
 
 };
 
-export default Nav;
+export default NavBar;
