@@ -51,16 +51,3 @@ class Topics extends Component {
   };
 };
 export default Topics;
-
-
-
-
-{/* {topics.map(topic => {
-          return ( */}
-{/* //     <li key={topic.slug} className="topicstyle">
-        //       <h2>{topic.slug}</h2>
-        //       <Link to={`../articles/${topic.slug}`}>View Topic</Link>
-        //     </li>
-        //   );
-        // })
-        // } */}
