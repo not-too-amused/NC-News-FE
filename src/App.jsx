@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from "./components/Header.jsx";
-import HomeNav from "./components/Nav.jsx";
+import Nav from "./components/Nav.jsx";
 import Topics from "./components/Topics"
 import Articles from "./components/Articles"
 import ArticleCard from "./components/ArticleCard"
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header className="Header" />
-        <HomeNav className="Nav" path="/" />
+        <Nav className="Nav" path="/" />
         <Router className="Main">
           <Topics path="/" />
           <Articles path="/articles/all/" articles={this.state.articles} />
