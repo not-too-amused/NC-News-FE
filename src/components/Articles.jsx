@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Nav from 'react-bootstrap/Nav';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
 import './Articles.css';
 import axios from 'axios';
 import Moment from 'react-moment';
@@ -26,11 +28,18 @@ class Articles extends Component {
           {articles.map(article => {
             return (
               <li key={article.article_id} className="article">
-                <p className="article_title">{article.title}</p>
-                <p>{article.author}, <Moment format="LL">{article.created_at}</Moment></p>
-                <Nav.Item>
-                  <Nav.Link className="article_link" href={`${article.article_id}`}>See the full article here</Nav.Link>
-                </Nav.Item>
+                <Card style={{ width: '18rem' }}>
+                  <Card.Img variant="right" src="holder.js/100px180" />
+                  <Card.Body>
+                    <Card.Title className="article_title">{article.title}</Card.Title>
+                    <Card.Text>
+                      <p>{article.author}, <Moment format="LL">{article.created_at}</Moment></p>
+                    </Card.Text>
+                    <Nav.Item>
+                      <Nav.Link className="article_link" href={`${article.article_id}`}>See the full article here</Nav.Link>
+                    </Nav.Item>
+                  </Card.Body>
+                </Card>
               </li>
             )
           })}
