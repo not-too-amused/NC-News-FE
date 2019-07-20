@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from '@reach/router'
+import Nav from 'react-bootstrap/Nav';
 import './Articles.css';
-import axios from 'axios'
+import axios from 'axios';
+import Moment from 'react-moment';
 
 
 class Articles extends Component {
@@ -25,9 +26,11 @@ class Articles extends Component {
           {articles.map(article => {
             return (
               <li key={article.article_id} className="article">
-                <h2>{article.title}</h2>
-                <p>{article.author}, {article.created_at}</p>
-                <Link to={`${article.article_id}`}>See the full article</Link>
+                <p className="article_title">{article.title}</p>
+                <p>{article.author}, <Moment format="LL">{article.created_at}</Moment></p>
+                <Nav.Item>
+                  <Nav.Link className="article_link" href={`${article.article_id}`}>See the full article here</Nav.Link>
+                </Nav.Item>
               </li>
             )
           })}

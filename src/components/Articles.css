@@ -3,3 +3,18 @@
 overflow-y: scroll;
 max-height: 560px;
 }
+
+.article_title {
+  font-weight: 700;
+  font-size: 140%;
+  margin:.2em;
+}
+
+.article_link {
+background-color: rgba(108, 155, 150, 0.9);
+box-shadow:  0 0 2px 1px #EDEDED inset;
+font-weight: 400;
+font-size: 110%;
+margin-top: 0;
+margin-bottom: 3em;
+}
