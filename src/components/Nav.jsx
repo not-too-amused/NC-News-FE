@@ -1,11 +1,11 @@
 import React from "react";
 import Nav from 'react-bootstrap/Nav'
-import nav from "./Nav.css"
+import "../App.css"
 import { Link } from "@reach/router";
 
 const NavBar = () => {
   return (
-    <nav className="NavBar">
+    <nav>
       <Nav.Item>
         <Nav.Link href="/articles/all/12">Serve Me Up Something</Nav.Link>
       </Nav.Item>

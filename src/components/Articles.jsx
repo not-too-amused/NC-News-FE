@@ -26,7 +26,7 @@ class Articles extends Component {
             return (
               <li key={article.article_id} className="article">
                 <h2>{article.title}</h2>
-                <h3>{article.author}, {article.created_at}</h3>
+                <p>{article.author}, {article.created_at}</p>
                 <Link to={`${article.article_id}`}>See the full article</Link>
               </li>
             )
