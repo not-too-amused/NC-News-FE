@@ -1,7 +1,12 @@
-.topics {
- 
+.container {
+  position: relative;
+  text-align: center;
+  color:#EDEDED;
 }
-.image {
-  max-width: .3fr;
-  max-height: .3fr;
+
+.textoverlay {
+  position: absolute;
+  top: 8px;
+  left: 14em;
+  width:100%;
 }

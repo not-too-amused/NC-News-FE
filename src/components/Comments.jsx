@@ -9,15 +9,14 @@ class Comments extends Component {
 
   render() {
     const { comments } = this.state
-    console.log('>>>>', comments, '<<<<')
     return (
       <div>
         <div className="panel-group">
           <div className="panel panel-default">
             <div className="panel-heading">
-              <h3 className="panel-title">
-                <a data-toggle="collapse" href="#comments">Click here to see the comments</a>
-              </h3>
+              <p className="panel-title">
+                <a data-toggle="collapse" href="#comments">Click to see the comments</a>
+              </p>
             </div>
             <div id="comments" className="panel-collapse collapse">
               <ul className="comments">
@@ -25,15 +24,15 @@ class Comments extends Component {
                   comments.map(comment => {
                     return (
                       <li key={comment.comment_id} className="comment">
-                        <h5><span>{comment.author}</span>, {comment.created_at}</h5>
-                        <h4>{comment.body}</h4>
-                        <p>{comment.votes} people like this comment</p>
+                        <p className="created_at"><span className="author">{comment.author}</span>{comment.created_at}</p>
+                        <p className="comment_body">{comment.body}</p>
+                        <p className="votes">{comment.votes} people like this comment overall</p>
                       </li>
                     )
                   })
-                }}
+                }
               </ul>
-              <form action="">
+              <form action={''}>
                 <input type="text" name="newComment" value="Have your say.." />
                 <input type="submit" value="Submit" />
               </form>
@@ -46,12 +45,9 @@ class Comments extends Component {
     );
   }
 
-  postComment = (newComment) => {
-    this.setState({ newComment })
-  }
-
-
-
+  // postComment = (newComment) => {
+  //   this.setState({ newComment })
+  // }
 
   componentDidMount = async () => {
     const comments = await this.fetchCommentById();
@@ -67,6 +63,15 @@ class Comments extends Component {
     return data;
   }
 
+  commentDidUpdate = async (prevProps, prevState) => {
+    if (this.state.newComment !== prevState.newComment) {
+      const newComment = await this.postCommentById()
+      this.setState({ newComment })
+    }
+  }
+  // postCommentById = async () => {
+  //   const
+  // }
 
 
 }

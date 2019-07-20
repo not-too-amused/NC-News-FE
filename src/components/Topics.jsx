@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import axios from 'axios'
 import './Topics.css'
+import codingimg from '../images/coding.jpeg'
+import cookingimg from '../images/cooking.jpeg'
+import footballimg from '../images/football.jpeg'
 
 class Topics extends Component {
   state = {
@@ -11,29 +14,24 @@ class Topics extends Component {
     const { topics } = this.state;
     return (
       <ul className="topics" >
-        <h2>hot topics</h2>
-        {topics.map(topic => {
-          return (
-            <li key={topic.slug} className="topicstyle">
-              <h2>{topic.slug}</h2>
-              <Link to={`../articles/${topic.slug}`}>View Topic</Link>
-            </li>
-          );
-        })
-        }
-        {/* <li key='coding' className='coding'>
-          <h2>coding</h2>
-          <Link to={'../articles/coding'}><img src='https://images.pexels.com/photos/1342460/pexels-photo-1342460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt='screen with coding'></img></Link>
-        </li>
-        <li key='cooking'>
-          <h2>cooking</h2>
-          <Link to={'../articles/cooking'}><img src='https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt=' ceramic spoons with spices'></img></Link>
-        </li>
-        <li key='football'>
-          <h2>football</h2>
-          <Link to={'../articles/football'}><img src='https://images.pexels.com/photos/595229/pexels-photo-595229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt='table football'></img></Link>
-        </li> */}
-
+        <div className="container">
+          <li key='coding' >
+            <Link to={'../articles/coding'}><img src={codingimg} alt='screen with coding'></img></Link>
+          </li>
+          <div class="textoverlay"><h2>coding</h2></div>
+        </div>
+        <div className="container">
+          <li key='cooking'>
+            <Link to={'../articles/cooking'}><img src={cookingimg} alt=' ceramic spoons with spices'></img></Link>
+          </li>
+          <div class="textoverlay"><h2>cooking</h2></div>
+        </div>
+        <div className="container">
+          <li key='football'>
+            <Link to={'../articles/football'}><img src={footballimg} alt='table football'></img></Link>
+          </li>
+          <div class="textoverlay"><h2>football</h2></div>
+        </div>
       </ul>
     );
 
@@ -53,3 +51,16 @@ class Topics extends Component {
   };
 };
 export default Topics;
+
+
+
+
+{/* {topics.map(topic => {
+          return ( */}
+{/* //     <li key={topic.slug} className="topicstyle">
+        //       <h2>{topic.slug}</h2>
+        //       <Link to={`../articles/${topic.slug}`}>View Topic</Link>
+        //     </li>
+        //   );
+        // })
+        // } */}

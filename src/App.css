@@ -2,7 +2,7 @@
 
   display: grid;
   grid-template-rows: 220px 100px auto auto;
-  grid-template-columns: minmax(300ppx, 1fr);
+  grid-template-columns: auto;
   grid-template-areas:
   "Header"
   "Nav"
@@ -12,12 +12,9 @@
   font-family: 'Roboto Condensed', sans-serif;
   color: #1C2322;
   background-color: #EDEDED;
-  max-width: 100%;
-  min-width: 300px;
-}
-.image {
-  max-width: 100px;
-  max-height: 100px;
+  width: 100%;
+  min-width: 320px;
+  min-height: 480px;
 }
 
 .comments {
@@ -25,5 +22,13 @@
   font-family: 'Roboto Condensed', sans-serif;
   color: #1C2322;
   background-color: #EDEDED;
+  overflow-y: scroll;
+  max-height: 560px;
   
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    grid-template-columns: 320px;
+  }
 }

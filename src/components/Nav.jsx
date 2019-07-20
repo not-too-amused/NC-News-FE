@@ -5,7 +5,7 @@ import { Link } from "@reach/router";
 const HomeNav = () => {
   return (
     <nav className="HomeNav">
-      <Link to="/articles/all/12">
+      <Link to={"/articles/all/12"}>
         <button>Serve me up something</button>
       </Link>
       <Link to="/articles/all">
@@ -17,7 +17,12 @@ const HomeNav = () => {
       {/* <div><input type="text" placeholder="Search.." /></div> */}
     </nav>
   );
+
+
+
 };
+
+
 
 // const QueryNav = () => {
 //   return (

@@ -1,5 +1,5 @@
 .articles {
   grid-area: main;
 overflow-y: scroll;
-
+max-height: 560px;
 }

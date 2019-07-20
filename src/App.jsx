@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from "./components/Header.js";
-import HomeNav from "./components/Nav.js";
-import QueryNav from "./components/Nav.js";
+import Header from "./components/Header.jsx";
+import HomeNav from "./components/Nav.jsx";
 import Topics from "./components/Topics"
 import Articles from "./components/Articles"
 import ArticleCard from "./components/ArticleCard"
 import Comments from "./components/Comments"
-import Footer from "./components/Footer.js";
+import Footer from "./components/Footer.jsx";
 import { Router } from "@reach/router";
 import axios from 'axios';
 
