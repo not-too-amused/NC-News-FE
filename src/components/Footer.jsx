@@ -1,7 +1,9 @@
 import React from "react";
+import './Footer.css'
+import GitHublogo from '../images/GitHublogo.png'
 
 const Footer = () => {
-  return <h3 className="Footer">this is the footer nav bar</h3>
+  return <footer className="Footer"><a href="https://github.com/not-too-amused">You can find the source code for this project on GitHub <img className="gitLogo" src={GitHublogo} alt="GitHub logo"></img></a ></footer >
 }
 
 export default Footer

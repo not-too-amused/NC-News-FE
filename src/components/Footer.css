@@ -1,0 +1,29 @@
+.Footer {
+padding: 10px;  
+background-color: rgba(28, 35, 34, 0.95);
+color: #6C9B96;
+text-align: center;
+width: 100%;
+margin: 0;
+transition: 500ms;
+
+}
+
+.gitLogo {
+  padding: 5px;
+  max-width: 50px;
+  max-height: 50px;
+  background-color: rgba#6C9B96;
+}
+
+.Footer:hover{
+  font-size: 105%;
+  transition: 300ms;
+  }
+
+@media screen and (max-width: 667px) {
+  .Footer:hover{
+  font-size: 101%;
+  transition: 300ms;
+  }
+}

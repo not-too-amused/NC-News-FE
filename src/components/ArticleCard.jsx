@@ -11,7 +11,7 @@ class ArticleCard extends Component {
     const { article: { title, body, votes, author } } = this.state
     return (
       <div className="articleCard" >
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         <p className="articleinfo">{author}</p>
         <p className="articleinfo">{votes}</p>
         <p className="articleinfo">{body}</p>
