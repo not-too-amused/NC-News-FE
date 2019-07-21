@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../App.css'
 import { Accordion, Card } from 'react-bootstrap'
 import Form from './Form'
+import Moment from 'react-moment'
 
 class Comments extends Component {
   state = {
@@ -25,7 +26,7 @@ class Comments extends Component {
                     comments.map(comment => {
                       return (
                         <li key={comment.comment_id} className="comment">
-                          <p className="created_at"><span className="author">{comment.author}</span>{comment.created_at}</p>
+                          <p className="created_at"><span className="author">{comment.author} </span><Moment format="LL">{comment.created_at}</Moment></p>
                           <p className="comment_body">{comment.body}</p>
                           <p className="votes">{comment.votes} people like this comment overall</p>
                           <div className="thumbs" ><i className="fa fa-thumbs-up"></i> <i className="fa fa-thumbs-down"></i></div>

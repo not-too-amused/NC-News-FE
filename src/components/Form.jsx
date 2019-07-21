@@ -7,8 +7,6 @@ class Form extends Component {
     body: "Have your say.."
   }
 
-
-
   render() {
     return (
       <form className="addComment" onSubmit={this.handleSubmit}>
@@ -28,7 +26,6 @@ class Form extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log(this.state, '<< STATE')
     const { article_id } = this.props;
     console.log(article_id)
     const newComment = this.state;
