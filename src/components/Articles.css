@@ -1,7 +1,22 @@
 .articles {
+  width: 100vw;
   grid-area: main;
   overflow-y: scroll;
   max-height: 560px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: #EDEDED
+  
+}
+
+select {
+  background-color: #EDEDED;
+  width: 50vw;
 }
 
 .article {
@@ -9,7 +24,10 @@
 }
 
 .articles_card {
-  background-color:#EDEDED;
+  width: 40vw;
+  height: 18vw;
+  padding: 2vw;
+  background-color:whitesmoke;
   border-width: 1.75px;
   border-color: #6C9B96;
 }
@@ -38,3 +56,43 @@ margin-left: .8em;
 .article_link:hover {
   color: #E05E5E;
 }
+
+@media screen and (max-width: 667px) {
+  .articles_card {
+    width: 90vw;
+    height: 33vw;
+  }
+  .article_title {
+    font-size: 3.2vw;
+  }
+  .article_info{
+    font-size: 2.5vw;
+  }
+  .article_link{
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width:668px) and (max-width: 899px) {
+  .articles_card {
+    width: 40vw;
+    height: 26vw;
+    padding: 2vw;
+  }
+  .article_title {
+    font-size: 2.2vw;
+  }
+  .article_info{
+    font-size: 2vw;
+  }
+  .article_link{
+    font-size: 2vw;
+  }
+} 
+
+@media screen and (min-width: 900px) {
+  .articles_card {
+    width: 30vw;
+    height: 18vw;
+  }
+}  

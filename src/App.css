@@ -3,6 +3,7 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-rows: 2fr 1fr auto 1fr;
+  overflow-x: hidden;
   grid-template-areas:
   "Header"
   "Nav"
@@ -51,7 +52,9 @@ a::after{
 
 .Navbar {
   grid-area: "Nav";
-  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(28, 35, 34, 0.95);
   color: #6C9B96;
   font-weight: 400;
