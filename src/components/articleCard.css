@@ -1,9 +1,17 @@
 .articleCard {
-  padding-left: 5em;
-  padding-right: 5em;
-  text-align: end;
+  padding-left: 4vw;
+  padding-right: 5vw;
+  text-align: justify;
 }
 
-h3 {
-  text-align: justify;
+h1 {
+  padding-top: 2vh;
+  text-align: left;
+  font-size:5vw;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+  font-size:8vw;
+  }
 }

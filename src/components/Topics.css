@@ -1,10 +1,13 @@
 .container {
+  width: 100vw;
   position: relative;
   text-align: center;
   color:#EDEDED;
+  margin: 0;
 }
 
 .textoverlay {
+  margin:0;
   position: absolute;
   top: 8px;
   left: 14em;

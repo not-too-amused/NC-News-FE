@@ -4,17 +4,14 @@ import "../App.css"
 
 const NavBar = () => {
   return (
-    <nav>
-      <Nav.Item>
+    <Nav className="Navbar">
+      <Nav.Item >
         <Nav.Link href="/articles/all/12">Serve Me Up Something</Nav.Link>
       </Nav.Item>
-      <Nav.Item>
+      <Nav.Item >
         <Nav.Link href="/articles/all">Show Me Everything</Nav.Link>
       </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href="/">Create A New Article</Nav.Link>
-      </Nav.Item>
-    </nav>
+    </Nav >
   );
 };
 

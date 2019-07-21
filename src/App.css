@@ -1,7 +1,8 @@
 body {
   display: grid;
-  grid-template-rows: 220px 50px auto auto;
-  grid-template-columns: auto;
+  width: 99vw;
+  height: 99vh;
+  grid-template-rows: 2fr 1fr auto 1fr;
   grid-template-areas:
   "Header"
   "Nav"
@@ -12,22 +13,47 @@ body {
   color: #1C2322;
   background-color: rgba(237, 237, 237, 0.733);
   width: 100%;
-  min-width: 320px;
-  min-height: 480px;
+  max-width: 500px;
+  margin: 0;
+}
+
+.App {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 2fr 1fr auto 1fr;
+  grid-template-areas:
+  "Header"
+  "Nav"
+  "Main"
+  "Bottom";
+  min-width: 300px;
+  
+
+
 }
 
 
-nav {
+.Navbar {
   grid-area: "Nav";
+  align-content: center;
   background-color: rgba(28, 35, 34, 0.95);
   color: #6C9B96;
   font-weight: 400;
-  font-size: 110%;
+  font-size: 2vw;
+}
+
+.card-body {
+  padding: 0;
+}
+.card-body p {
+  margin: 4vw;
 }
 
 .comments {
+  padding: 0;
   width: 100%;
-  text-align: left;
+  text-align: justify;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 110%;
   color: #1C2322;
@@ -40,6 +66,8 @@ nav {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+
 
 .thumbs {
   text-align: end;
@@ -66,3 +94,35 @@ nav {
     transition: 20ms;
     color:  #E05E5E;
   }
+
+  form {
+background-color: #EDEDED;
+margin: 2vw;
+
+  }
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: whitesmoke;
+  }
+  .Navbar {
+  font-weight: 400;
+  font-size: 3.5vw;
+  }
+  .thumbs {
+  text-align: center;
+}
+
+
+.fa-thumbs-up {
+  color: #1C2322;
+  margin-right: .5em;
+  font-size: 150%;
+  }
+.fa-thumbs-down {
+  color: #1C2322;
+  margin-left: .5em;
+  margin-right: .5em;
+  font-size: 150%;
+  }
+}
