@@ -1,9 +1,17 @@
+.topics {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+
 .container {
   width: 100vw;
   position: relative;
   text-align: center;
   color:#EDEDED;
   margin: 0;
+  padding: 0;
 }
 
 .textoverlay {
@@ -12,4 +20,17 @@
   top: 8px;
   left: 14em;
   width:100%;
+}
+
+@media screen and (max-width: 667px) {
+  img {
+    width:100vw;
+  }
+  .textoverlay {
+  margin:0;
+  position: absolute;
+  top: 5vw;
+  left: 27vw;
+  width:100%;
+  }
 }

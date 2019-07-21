@@ -51,7 +51,6 @@ class Articles extends Component {
     console.log({ articles })
     this.setState({ articles })
   }
-  //topic, sort, order
   fetchArticles = async () => {
     const { topic } = this.props
     const { sort_by } = this.state
