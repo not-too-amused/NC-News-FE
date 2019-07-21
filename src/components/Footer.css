@@ -5,7 +5,8 @@ color: #6C9B96;
 text-align: center;
 width: 100%;
 margin: 0;
-transition: 500ms;
+transition: 600ms;
+transition-delay: 200ms;
 
 }
 
@@ -18,7 +19,8 @@ transition: 500ms;
 
 .Footer:hover{
   font-size: 105%;
-  transition: 300ms;
+  transition: 400ms;
+  cursor: pointer;
   }
 
 @media screen and (max-width: 667px) {

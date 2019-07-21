@@ -20,7 +20,7 @@ body {
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-rows: 2fr 1fr auto 1fr;
+  grid-template-rows: 1fr 1fr 10fr 1fr;
   grid-template-areas:
   "Header"
   "Nav"
@@ -43,6 +43,11 @@ a::after{
   text-decoration: none;
 }
 
+.article_link:hover {
+  color: #E05E5E;
+  transition: 300ms;
+}
+
 
 .Navbar {
   grid-area: "Nav";
@@ -59,6 +64,19 @@ a::after{
 .card-body p {
   margin: 4vw;
 }
+
+.commentToggle {
+background-color: rgba(28, 35, 34, 0.95);
+  color: #6C9B96;
+  transition: 600ms;
+  transition-delay: 200ms;
+}
+.commentToggle:hover {
+  font-size: 105%;
+  transition: 400ms;
+  cursor: pointer;
+}
+
 
 .comments {
   padding: 0;
@@ -107,6 +125,7 @@ background-color: #EDEDED;
 margin: 2vw;
 }
 
+
 @media screen and (max-width: 667px) {
   body {
     background-color: whitesmoke;
@@ -130,3 +149,10 @@ margin: 2vw;
   font-size: 150%;
   }
 }
+
+@media screen and (min-width: 900px) {
+.Navbar {
+  font-size: 1.5vw;
+}
+
+}  
