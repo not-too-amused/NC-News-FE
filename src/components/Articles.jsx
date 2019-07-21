@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button'
 import './Articles.css';
 import axios from 'axios';
 import Moment from 'react-moment';
+import { Link } from '@reach/router';
 
 
 class Articles extends Component {
@@ -34,7 +35,7 @@ class Articles extends Component {
                     <Card.Text className="article_info">
                       Created by {article.author} on <Moment format="LL">{article.created_at}</Moment>
                     </Card.Text>
-                    <Button className="article_link" variant="link" href={`${article.article_id}`} >See the full article here</Button>
+                    <Link className="article_link" to={`${article.article_id}`} >See the full article here</Link>
                   </Card.Body>
                 </Card>
               </li>
