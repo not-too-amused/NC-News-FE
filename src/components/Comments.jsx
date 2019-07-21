@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 import '../App.css'
 import { Accordion, Card } from 'react-bootstrap'
+import Form from './Form'
 
 class Comments extends Component {
   state = {
@@ -33,10 +34,7 @@ class Comments extends Component {
                     })
                   }
                 </ul>
-                <form action={''}>
-                  <input type="text" name="newComment" value="Have your say.." />
-                  <input type="submit" value="Submit" />
-                </form>
+                <Form />
               </Card.Body>
             </Accordion.Collapse>
           </Card>
