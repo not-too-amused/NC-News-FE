@@ -27,14 +27,13 @@ class Form extends Component {
   handleSubmit = event => {
     event.preventDefault()
     const { article_id } = this.props;
-    console.log(article_id)
     const newComment = this.state;
-    this.submitComment(article_id, newComment)
+    this.submitComment(newComment)
   }
 
   submitComment = async (article_id, newComment) => {
     const { data } = await axios.post(
-      `https://rebbit-db.herokuapp.com/api/articles/${article_id}/comments`, newComment
+      `https://rebbit-db.herokuapp.com/api/articles/12/comments`, newComment
     )
     return data.comment
   }

@@ -39,7 +39,6 @@ class Topics extends Component {
 
   componentDidMount = async () => {
     const topics = await this.fetchTopics();
-    console.log(topics, 'mounting!!')
     this.setState(topics);
   };
 
