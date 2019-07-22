@@ -12,6 +12,8 @@ class Comments extends Component {
 
   render() {
     const { comments } = this.state
+    const { article_id } = this.props
+
     return (
       <div>
         <Accordion defaultActiveKey="0">
@@ -35,7 +37,7 @@ class Comments extends Component {
                     })
                   }
                 </ul>
-                <Form />
+                <Form article_id={article_id} />
               </Card.Body>
             </Accordion.Collapse>
           </Card>

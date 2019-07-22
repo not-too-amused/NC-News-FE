@@ -27,10 +27,7 @@
     width:100vw;
   }
   .textoverlay {
-  margin:0;
-  position: absolute;
   top: 5vw;
-  left: 27vw;
-  width:100%;
+  left: 67vw;
   }
 }
