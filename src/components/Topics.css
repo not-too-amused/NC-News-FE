@@ -67,4 +67,34 @@ img {
   top: 8vw;
   left: 67vw;
   }
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+  box-shadow: 0 10px 20px 15px #141919, 0 6px 20px 0 #141919;
+  }
+  .container {
+  width: 60vw;
+  position: relative;
+  text-align: center;
+  color:#EDEDED;
+  margin: 0;
+  padding: 0;
+}
+.textoverlay {
+  margin:0;
+  position: absolute;
+  top: 50px;
+  left: 40vw;
+  width:20vw;
+}
+.topics {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.topics h2 {
+    font-size: 5vw;
+  }
 }

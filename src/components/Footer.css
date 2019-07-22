@@ -1,6 +1,6 @@
 .Footer {
-padding: 10px;  
-background-color: rgba(28, 35, 34, 0.95);
+padding: 5vw;  
+background-color: rgba(28, 35, 34);
 color: #6C9B96;
 text-align: center;
 width: 100%;
@@ -28,4 +28,12 @@ transition-delay: 200ms;
   font-size: 101%;
   transition: 300ms;
   }
+}
+
+.ErrorFooter{
+  background-color: rgba(28, 35, 34, 0.95);
+  color: #6C9B96;
+  text-align: center;
+  padding: 5vw;
+  font-size: 4vw;
 }

@@ -59,22 +59,14 @@ body {
 }
 
 .error {
-  padding-top: 13vw;
   display: block;
   max-block-size: 10vw;
   filter: hue-rotate(210deg);
 }
 .error img {
-  max-width: 40vw;
+  margin-top: 5vw;
+  max-width: 50vw;
 }
-
-.ErrorFooter{
-  background-color: rgba(28, 35, 34, 0.95);
-  color: #6C9B96;
-  text-align: center;
-  padding: 5vw;
-}
-
 
 
 @media screen and (max-width: 667px) {
