@@ -1,20 +1,17 @@
 .topics {
   width: 100vw;
-  margin: 0;
-  padding: 0;
-  background-color: #1C2322;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(28, 35, 34, 0.95);
+  list-style: none;
 }
 
-.topicElement {
-    padding: 0;
-    margin: 0
-  }
 
 img {
     width:100vw;
+    margin: 0;
   }
-  
-
 
 .container {
   width: 100vw;
@@ -33,6 +30,16 @@ img {
   width:20%;
 }
 
+
+@media screen and (min-width: 576px) {
+  img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  box-shadow: 0 10px 20px 15px #141919, 0 6px 20px 0 #141919;
+  }
+}
 
 
 /**Tablets*/

@@ -11,6 +11,7 @@ class Articles extends Component {
 
   render() {
     const { articles } = this.state;
+    console.log(articles)
     return (
       <div>
         <select onChange={(event) => this.handleChange(event.target.value)} id="sort">
@@ -50,27 +51,27 @@ class Articles extends Component {
     const articles = await this.fetchArticles();
     this.setState({ articles })
   }
-  fetchArticles = async () => {
+  fetchArticles = async (sort) => {
     const { topic } = this.props
-    const { sort_by } = this.state
-    const { order } = this.state
+    // const { order } = this.state
     const { data } = await axios.get(
-      'https://rebbit-db.herokuapp.com/api/articles', { params: { topic, sort_by, order } }
+      'https://rebbit-db.herokuapp.com/api/articles', { params: { topic, sort_by: sort } }
 
     )
     return data.articles
   }
-  handleChange(sort) {
-    this.setState = { articles: [], sort_by: 'created_at', order: 'desc' }
-    console.log(this.state)
-  }
-  handleOrder(order) {
-    this.setState = { order: order }
-    console.log(this.state)
+
+  handleChange = (sort) => {
+    this.fetchArticles(sort).then(articles => this.setState({ articles }))
   }
 
+  // handleOrder(order) {
+  //   this.setState = { order: order }
+  //   console.log(this.state)
+  // }
+
   componentDidUpdate = async (prevProps, prevState) => {
-    if (this.state.sort_by !== prevState.sort_by || this.state.order !== prevState.order) {
+    if (this.state.sort_by !== prevState.sort_by) {
       console.log('yes component DID update!')
       const articles = await this.fetchArticles()
       this.setState({ articles })
