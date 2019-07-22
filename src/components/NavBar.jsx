@@ -2,6 +2,7 @@ import React from "react";
 import Nav from 'react-bootstrap/Nav'
 import { RandomArticle } from '../utils'
 import "../App.css"
+import "./NavBar.css"
 
 const NavBar = () => {
   return (

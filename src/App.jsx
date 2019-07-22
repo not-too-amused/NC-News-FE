@@ -6,6 +6,8 @@ import Topics from "./components/Topics"
 import Articles from "./components/Articles"
 import ArticleCard from "./components/ArticleCard"
 import Comments from "./components/Comments"
+import Error from "./components/Error"
+import ErrorFooter from "./components/ErrorFooter"
 import Footer from "./components/Footer.jsx";
 import { Router } from "@reach/router";
 
@@ -19,10 +21,12 @@ const App = () => {
         <Articles path="/articles/all/" />
         <Articles path="/articles/:topic" />
         <ArticleCard path="/articles/:topic/:article_id" />
+        <Error default path="/error" />
       </Router>
       <Router className="Bottom">
         <Comments className="Comments" path="/articles/:topic/:article_id" />
         <Footer path="/" className="Footer" />
+        <ErrorFooter default path="/error" />
       </Router>
     </div>
   );

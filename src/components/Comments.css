@@ -38,22 +38,21 @@ background-color: rgba(28, 35, 34, 0.95);
 .thumbs {
   text-align: center;
 }
-
 .fa-thumbs-up {
   color: #1C2322;
   margin-right: .5em;
   font-size: 200%;
+} 
+.fa-thumbs-up:hover {
+    transition: 100ms;
+    color: #6C9B96;
 }
+
 .fa-thumbs-down {
   color: #1C2322;
   margin-left: .5em;
   margin-right: .5em;
   font-size: 200%;
-}
-  
-.fa-thumbs-up:hover {
-    transition: 20ms;
-    color: #6C9B96;
 }
 .fa-thumbs-down:hover {
     transition: 20ms;
