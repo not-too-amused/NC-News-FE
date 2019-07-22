@@ -15,7 +15,7 @@ class Topics extends Component {
     return (
       <ul className="topics" >
         <div className="container">
-          <li key='coding' >
+          <li className="topicElement" key='coding' >
             <Link to={'../articles/coding'}><img src={codingimg} alt='screen with coding'></img></Link>
           </li>
           <div class="textoverlay"><h2>coding</h2></div>
