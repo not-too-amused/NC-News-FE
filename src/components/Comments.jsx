@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import '../App.css'
+import './Comments.css'
 import { Accordion, Card } from 'react-bootstrap'
 import Form from './Form'
 import Moment from 'react-moment'
@@ -32,6 +33,7 @@ class Comments extends Component {
                           <p className="comment_body">{comment.body}</p>
                           <p className="votes">{comment.votes} people like this comment overall</p>
                           <div className="thumbs" ><i className="fa fa-thumbs-up"></i> <i className="fa fa-thumbs-down"></i></div>
+                          <hr className="comment_break"></hr>
                         </li>
                       )
                     })
