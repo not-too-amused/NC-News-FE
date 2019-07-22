@@ -1,8 +1,8 @@
 .comment_break {
-        border: 2px dashed #1C2322;
+        border: 1px solid #6C9B96;
         width: 80%;
-        margin-top: 2%;
-        margin-bottom: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
 }
 
 .commentToggle {
