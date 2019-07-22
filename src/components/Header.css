@@ -1,5 +1,6 @@
 .Header {
   width: 100vw;
+  max-height: 30vh;
   text-align: right;
   padding: 0;
   padding-right: 8vw;

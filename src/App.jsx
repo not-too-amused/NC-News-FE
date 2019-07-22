@@ -7,7 +7,6 @@ import Articles from "./components/Articles"
 import ArticleCard from "./components/ArticleCard"
 import Comments from "./components/Comments"
 import Error from "./components/Error"
-import ErrorFooter from "./components/ErrorFooter"
 import Footer from "./components/Footer.jsx";
 import { Router } from "@reach/router";
 
@@ -26,7 +25,6 @@ const App = () => {
       <Router className="Bottom">
         <Comments className="Comments" path="/articles/:topic/:article_id" />
         <Footer path="/" className="Footer" />
-        <ErrorFooter default path="/error" />
       </Router>
     </div>
   );

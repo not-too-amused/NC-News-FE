@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import './articleCard.css';
 import axios from 'axios';
+import { navigate } from '@reach/router';
 
 class ArticleCard extends Component {
   state = {
-    article: {}
+    article:
+    {
+      title: "",
+      body: "",
+      votes: 0,
+      author: ""
+
+    }
   }
 
   render() {
@@ -19,9 +27,13 @@ class ArticleCard extends Component {
     );
   }
 
-  componentDidMount = async () => {
-    const article = await this.fetchArticleById();
-    this.setState({ article })
+  componentDidMount = () => {
+    this.fetchArticleById().then(article => {
+      this.setState({ article })
+    }).catch(err => {
+      navigate('/error', { replace: true })
+    })
+
   }
 
   fetchArticleById = async () => {
@@ -30,6 +42,7 @@ class ArticleCard extends Component {
       `https://rebbit-db.herokuapp.com/api/articles/${article_id}`
     )
     return data.articles;
+
   }
 }
 
