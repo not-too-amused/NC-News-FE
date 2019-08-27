@@ -30,7 +30,7 @@ class Articles extends Component {
               <li key={article.article_id} className="article">
                 <Card className="articles_card">
                   {/* <Card.Img variant="right" src="placeholder" /> */}
-                  <Card.Body>
+                  <Card.Body className="card_parent">
                     <Card.Title className="article_title">{article.title}</Card.Title>
                     <Card.Text className="article_info">
                       Created by {article.author}<br></br><Moment format="LL">{article.created_at}</Moment>

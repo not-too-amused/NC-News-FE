@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './articleCard.css';
+import './ArticleCard.css';
 import axios from 'axios';
 import { navigate } from '@reach/router';
 
@@ -20,9 +20,9 @@ class ArticleCard extends Component {
     return (
       <div className="articleCard" >
         <h2>{title}</h2>
-        <p className="articleinfo">{author}</p>
-        <p className="articleinfo">{votes}</p>
-        <p className="articleinfo">{body}</p>
+        <p className="articleInfo">by <span className="author">{author}</span>, voted {votes} overall</p>
+        <hr className="comment_break"></hr>
+        <p className="articleBody">{body}</p>
       </div>
     );
   }

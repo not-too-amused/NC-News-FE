@@ -20,6 +20,7 @@ select {
 }
 
 .article {
+  position: relative;
   margin: 1em;
 }
 
@@ -41,8 +42,8 @@ select {
 .article_info {
   text-align: left;
   margin: 1.5em;
-  /* margin-left: 1.5em; */
-  /* padding-right: 1em; */
+  position: absolute;
+  bottom: 7.5vw; 
 }
 
 .article_link {
@@ -51,12 +52,16 @@ font-weight: 400;
 font-size: 110%;
 margin-top: 0;
 margin-left: .8em;
+position: absolute;
+bottom: 2vw;
 }
 
 .article_link:hover {
   color: #E05E5E;
 }
 
+
+/* Is this doing anything??? */
 @media screen and (max-width: 667px) {
   .articles_card {
     width: 90vw;
@@ -77,16 +82,19 @@ margin-left: .8em;
   .articles_card {
     width: 40vw;
     height: 26vw;
-    padding: 2vw;
+    padding: 1vw;
   }
   .article_title {
     font-size: 2.2vw;
   }
   .article_info{
-    font-size: 2vw;
+    font-size: 1.8vw;
+    position: absolute;
+    bottom: 6vw; 
   }
   .article_link{
     font-size: 2vw;
+    bottom: 1vw
   }
 } 
 
@@ -94,5 +102,22 @@ margin-left: .8em;
   .articles_card {
     width: 30vw;
     height: 18vw;
+    padding: 1vw;
+  }
+  .article_title {
+    font-size: 1.8vw;
+  }
+  .article_info{
+    font-size: 1.4vw;
+    position: absolute;
+    bottom: 2vw;
+    right: -2.5vw;
+    text-align: right;
+    
+    font-weight: 300;
+  }
+  .article_link{
+    font-size: 1.6vw;
+    bottom: 1vw
   }
 }  

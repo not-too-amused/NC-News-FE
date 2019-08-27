@@ -1,0 +1,40 @@
+.articleCard {
+  padding-left: 4vw;
+  padding-right: 5vw;
+  text-align: justify;
+}
+
+.articleInfo {
+  
+  font-size: 80%;
+}
+
+.author {
+  font-size: 140%
+}
+
+h2 {
+  padding-top: 2vh;
+  text-align: left;
+  font-size:5vw;
+}
+
+@media screen and (min-width: 900px) {
+.articleInfo {
+  
+  font-size: 110%;
+}
+
+.author {
+  font-size: 140%;
+}
+
+.articleBody {
+  font-size: 125%;
+  font-weight: 300;
+}
+
+h2 {
+    font-size: 3vw;
+  }
+}
