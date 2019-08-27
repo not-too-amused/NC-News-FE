@@ -14,6 +14,7 @@
 
 img {
     width:100vw;
+    position: relative;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -38,12 +39,15 @@ img {
 }
 
 
-@media screen and (min-width: 576px) {
-  img {
-  width: 90vw;
+/* @media screen and (min-width: 576px) {
+container.img {
+  max-width:100%;
+  height:auto;
+  display: block;
+  margin: 0;
   box-shadow: 0 10px 20px 15px #141919, 0 6px 20px 0 #141919;
   }
-}
+} */
 
 
 /**Tablets*/
