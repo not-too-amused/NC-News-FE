@@ -24,11 +24,6 @@ h1 span {
   padding: .02em;
 }
 
-.d-inline-block {
-  max-height: 50px;
-  position: relative;
-}
-
 .fa-user {
   position: relative;
   padding-top: 16vw;
@@ -37,10 +32,6 @@ h1 span {
   right: 1vw;
   
   font-size: 6vw;
-}
-
-.logged_user {
-  color: #6C9B96;
 }
 
 @media screen and (max-width: 667px) {
@@ -53,11 +44,12 @@ h1 span {
 }
 @media screen and (min-width: 900px) {
   .Header {
-      font-size: 16vw;
+    max-height: 24vw;
+    font-size: 16vw;
   }
   .fa-user {
-  font-size: 4vw;
-  padding-top: 10vw;
-  padding-bottom: 2vw;
-}
+    font-size: 4vw;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+  }
 }

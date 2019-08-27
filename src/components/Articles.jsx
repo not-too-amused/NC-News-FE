@@ -72,7 +72,6 @@ class Articles extends Component {
 
   componentDidUpdate = async (prevProps, prevState) => {
     if (this.state.sort_by !== prevState.sort_by) {
-      console.log('yes component DID update!')
       const articles = await this.fetchArticles()
       this.setState({ articles })
     }

@@ -1,7 +1,6 @@
 a {
   color:inherit;
   text-decoration: none;
-  
 }
 a:hover{
   color:inherit;
@@ -10,4 +9,15 @@ a:hover{
 a::after{
   color:inherit;
   text-decoration: none;
+}
+
+@media screen and (min-width: 667px) {
+  a.nav-link {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  a.nav-link {
+      font-size: 2vw;
+  }
 }

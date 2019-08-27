@@ -20,12 +20,13 @@ background-color: rgba(28, 35, 34, 0.95);
 
 .comments {
   padding: 0;
+  margin: 0;
   width: 100%;
   text-align: justify;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 110%;
   color: #1C2322;
-  background-color: #EDEDED;
+  background-color:whitesmoke;
   overflow-y: scroll;
   max-height: 560px;  
 }
@@ -60,8 +61,25 @@ background-color: rgba(28, 35, 34, 0.95);
 }
 
 form {
-background-color: #EDEDED;
-margin-left: 1vw;
+background-color:whitesmoke;
+padding: 1vw;
+}
+input {
+  margin-left: 1vw;
+  width: 96vw;
+  height:10vh;
+  font-size: 115%;
+}
+::placeholder {
+  padding: 1vw;
+  font-size: 140%;
+}
+button {
+  margin-left: 1vw;
+  width: auto;
+  height: 120%;
+  font-size: 130%;
+  right: 1vw;
 }
 
 @media screen and (max-width: 667px) {
@@ -82,4 +100,16 @@ margin-left: 1vw;
   margin-right: .5em;
   font-size: 150%;
   }
+}
+
+@media screen and (min-width: 1024px) {
+  input {
+  margin-left: 1vw;
+  width: 86vw;
+  }
+  button {
+  height: 120%;
+  margin: 1vw;
+  }
+
 }

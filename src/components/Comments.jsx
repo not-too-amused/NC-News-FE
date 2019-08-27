@@ -62,7 +62,6 @@ class Comments extends Component {
     const { data } = await axios.get(
       `https://rebbit-db.herokuapp.com/api/articles/${article_id}/comments`
     )
-    console.log(data)
     return data;
   }
 
