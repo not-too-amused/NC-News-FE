@@ -11,7 +11,6 @@ class ArticleCard extends Component {
       body: "",
       votes: 0,
       author: ""
-
     }
   }
 
@@ -33,7 +32,6 @@ class ArticleCard extends Component {
     }).catch(err => {
       navigate('/error', { replace: true })
     })
-
   }
 
   fetchArticleById = async () => {
@@ -42,7 +40,6 @@ class ArticleCard extends Component {
       `https://rebbit-db.herokuapp.com/api/articles/${article_id}`
     )
     return data.articles;
-
   }
 }
 

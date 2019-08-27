@@ -1,6 +1,6 @@
 .Header {
   width: 100vw;
-  max-height: 20vh;
+  max-height: 16vh;
   text-align: right;
   padding: 0;
   padding-right: 1vw;
@@ -13,10 +13,9 @@
   text-shadow: .005em .005em #141919;
 }
 
-
 h1 {
   position: absolute;
-  background-color: rgba(28, 35, 34);
+  
 }
 
 h1 span {
@@ -30,7 +29,6 @@ h1 span {
   padding-bottom: 1vw;
   top: 4vw;
   right: 1vw;
-  
   font-size: 6vw;
 }
 
@@ -42,10 +40,27 @@ h1 span {
     font-size: 6vw;
   }
 }
+
+@media screen and (min-width: 667px) {
+  .Header {
+    max-height: 20vw;
+    font-size: 12vw;
+    /* padding-right: 4.6vw; */
+  }
+  .fa-user {
+    position: relative;
+    padding-top: 9vw;
+    padding-bottom: 4.5vw;
+    top: 4vw;
+    right: 1vw;
+    font-size: 6vw;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .Header {
     max-height: 24vw;
-    font-size: 16vw;
+    font-size: 12vw;
   }
   .fa-user {
     font-size: 4vw;

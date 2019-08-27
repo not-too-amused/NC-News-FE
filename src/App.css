@@ -11,8 +11,7 @@ body {
   "Bottom";
   text-align: left;
   font-family: 'Roboto Condensed', sans-serif;
-  color: #1C2322;
-  background-color:whitesmoke;
+  background-color: whitesmoke;
   width: 100%;
   margin: 0;
 }
@@ -29,10 +28,6 @@ body {
   "Bottom";
   min-width: 300px;
 }
-
-/* .Main {
-  background-color: rgba(28, 35, 34, 0.95);
-} */
 
 .article_link:hover {
   color: #E05E5E;
@@ -81,8 +76,7 @@ body {
 
 
 @media screen and (min-width: 900px) {
-.Navbar {
-  font-size: 1.5vw;
+  .Navbar {
+    font-size: 1.5vw;
+  }
 }
-
-}  
