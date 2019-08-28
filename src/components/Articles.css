@@ -1,8 +1,8 @@
 .articles {
   width: 100vw;
+  height: 100vh;
   grid-area: main;
   overflow-y: scroll;
-  max-height: 560px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -61,7 +61,6 @@ bottom: 2vw;
 }
 
 
-/* Is this doing anything??? */
 @media screen and (max-width: 667px) {
   .articles_card {
     width: 90vw;
@@ -113,7 +112,6 @@ bottom: 2vw;
     bottom: 2vw;
     right: -2.5vw;
     text-align: right;
-    
     font-weight: 300;
   }
   .article_link{
