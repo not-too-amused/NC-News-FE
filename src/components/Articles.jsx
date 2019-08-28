@@ -11,7 +11,6 @@ class Articles extends Component {
 
   render() {
     const { articles } = this.state;
-    console.log(articles)
     return (
       <div>
         <select onChange={(event) => this.handleChange(event.target.value)} id="sort">
@@ -50,27 +49,26 @@ class Articles extends Component {
     const articles = await this.fetchArticles();
     this.setState({ articles })
   }
-  fetchArticles = async (sort) => {
+  fetchArticles = async () => {
     const { topic } = this.props
-    // const { order } = this.state
+    const { order, sort_by } = this.state
     const { data } = await axios.get(
-      'https://rebbit-db.herokuapp.com/api/articles', { params: { topic, sort_by: sort } }
+      'https://rebbit-db.herokuapp.com/api/articles', { params: { topic, sort_by: sort_by, order: order } }
 
     )
     return data.articles
   }
 
   handleChange = (sort) => {
-    this.fetchArticles(sort).then(articles => this.setState({ articles }))
+    this.setState({ sort_by: sort })
   }
 
-  // handleOrder(order) {
-  //   this.setState = { order: order }
-  //   console.log(this.state)
-  // }
+  handleOrder(order) {
+    this.setState({ order: order })
+  }
 
   componentDidUpdate = async (prevProps, prevState) => {
-    if (this.state.sort_by !== prevState.sort_by) {
+    if (this.state.sort_by !== prevState.sort_by || this.state.order !== prevState.order) {
       const articles = await this.fetchArticles()
       this.setState({ articles })
     }
