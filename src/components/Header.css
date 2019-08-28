@@ -66,5 +66,9 @@ h1 span {
     font-size: 4vw;
     padding-top: 1vw;
     padding-bottom: 2vw;
+    padding-right: 1vw;
+  }
+  h1 {
+    right: 1vw;
   }
 }
